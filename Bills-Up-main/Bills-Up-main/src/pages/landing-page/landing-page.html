@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>Bill Up - Plataforma de Cursos Online</title>
+</head>
+
+<body >
+    <main class="min-h-screen bg-[#031638]">
+            <!-- Header -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-sm border-b border-gray-100" role="banner">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex items-center justify-between">
+                <!-- Logo and Brand -->
+                <div class="flex items-center space-x-3">
+                    <img src="../../../public/assets/logotipo sin letras.svg" alt="BillUp - Plataforma de Cursos Online"
+                        class="w-10 h-10">
+                    <h1 class="text-2xl font-bold text-[#013ca4]">BillUp</h1>
+                </div>
+
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8" role="navigation" aria-label="Navegación principal">
+                    <ul class="flex items-center space-x-8">
+                        <li><a href="#cursos" class="text-gray-600 hover:text-blue-600 transition-colors">Cursos</a>
+                        </li>
+                        <li><button
+                                class="border border-gray-300 text-gray-600 hover:bg-gray-50 cursor-pointer hover:scale-105 active:scale-95 transition-transform bg-transparent px-4 py-2 rounded-md" id="go-login-btn">Iniciar
+                                Sesión</button></li>
+                        <li><button
+                                class="bg-[#013ca4] hover:bg-[#0175e4] text-white px-6 py-2 cursor-pointer hover:scale-105 active:scale-95 transition rounded-md" id="go-register-btn">Comenzar
+                                Gratis</button></li>
+                    </ul>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden cursor-pointer hover:scale-105 active:scale-95 transition" aria-expanded="false" aria-controls="mobile-menu"
+                    aria-label="Abrir menú de navegación" id="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav id="mobile-menu" class="hidden md:hidden mt-4 pb-4 border-t  border-gray-100 pt-4" role="navigation"
+                aria-label="Navegación móvil">
+                <ul class="flex flex-col space-y-4">
+                    <li><a href="#cursos" class="text-gray-600 hover:text-blue-600 cursor-pointer hover:scale-105 active:scale-95 transition">Cursos</a></li>
+                    <li><button
+                            class="border border-gray-300 text-gray-600 hover:bg-gray-50 w-full bg-transparent px-4 py-2 rounded-md cursor-pointer hover:scale-105 active:scale-95 transition" id="go-login-movil">Iniciar
+                            Sesión</button></li>
+                    <li><button class="bg-[#013ca4] text-white w-full px-4 py-2 rounded-md cursor-pointer hover:scale-105 active:scale-95 transition" id="go-register-movil">Comenzar Gratis</button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="min-h-screen bg-[#031638]">
+        <!-- Hero Section -->
+        <section class="py-20 px-4 text-white" role="banner">
+            <div class="container mx-auto text-center">
+                <div class="flex justify-center mb-8">
+                    <img src="../../../public/assets/logotipo sin letras.svg" alt="BillUp Logo"
+                        class="w-20 h-20 filter brightness-0 invert">
+                </div>
+
+                <div class="inline-block mb-6 px-4 py-2 rounded-full bg-[#73b7ff] text-[#031638] font-medium">
+                    🚀 Más de 50,000 estudiantes activos
+                </div>
+
+                <h2 class="text-4xl md:text-6xl font-bold mb-6 text-white">
+                    Eleva tus Habilidades
+                    <br>
+                    <span class="text-[#73b7ff]">Transforma tu Futuro</span>
+                </h2>
+
+                <p class="text-xl text-gray-300 mb-8 max-w-2xl mx-auto">
+                    La plataforma de aprendizaje online más completa. Desde finanzas hasta tecnología, diseño y
+                    marketing.
+                    Cursos creados por expertos para impulsar tu carrera profesional.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-5 justify-center mb-12">
+                    <button
+                    id="start-free-btn"
+                        class="bg-white text-[#013ca4] font-semibold px-10 py-4 rounded-md hover:bg-gray-100 cursor-pointer hover:scale-105 active:scale-95 transition text-2xl" >
+                        Comenzar Gratis
+                    </button>
+                </div>
+
+                <!-- Statistics -->
+                <section aria-labelledby="stats-heading">
+                    <h3 id="stats-heading" class="sr-only">Estadísticas de la plataforma</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-3xl mx-auto">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2 text-[#73b7ff]">50,000+</div>
+                            <div class="text-gray-300">Estudiantes Activos</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2 text-[#0175e4]">4.8/5</div>
+                            <div class="text-gray-300">Calificación Promedio</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold mb-2 text-[#73b7ff]">200+</div>
+                            <div class="text-gray-300">Cursos Disponibles</div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+
+        <!-- Courses Section -->
+        <section id="cursos" class="py-20 px-4 bg-white" aria-labelledby="courses-heading">
+            <div class="container mx-auto">
+                <header class="text-center mb-16">
+                    <h2 id="courses-heading" class="text-3xl md:text-4xl font-bold mb-4 text-[#031638]">Nuestros Cursos</h2>
+                        Destacado
+                        <p class="text-xl text-gray-600 max-w-2xl mx-auto">
+                            Descubre una amplia variedad de cursos diseñados para impulsar tu crecimiento personal y
+                            profesional
+                        </p>
+                        
+                </header>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg gap-8" role="list">
+                    <!-- Course 1 - Finanzas -->
+                    <article
+                        class="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden rounded-lg"
+                        role="listitem">
+                        <div class="absolute top-4 right-4 z-10">
+                            <span class="bg-[#73b7ff] text-[#031638] px-3 py-1 rounded-full text-sm font-medium"
+                                aria-label="Curso más popular">Más Popular</span>
+                        </div>
+
+                        <div class="p-6 ">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-lg flex items-center justify-center text-white bg-[#013ca4]"
+                                    aria-hidden="true">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                                    </svg>
+                                </div>
+                                <span
+                                    class="border border-[#73b7ff] text-[#013ca4] px-3 py-1 rounded-full text-sm">Finanzas</span>
+                            </div>
+
+                            <h3 class="text-xl font-bold mb-2 text-[#031638]">Finanzas Personales para Jóvenes</h3>
+                            <p class="text-gray-600 mb-4">Aprende a manejar tu dinero, ahorrar e invertir
+                                inteligentemente</p>
+
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1 text-[#0175e4]" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-gray-600">8,500+ estudiantes</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1 text-[#0175e4]" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path d="M9 12h6l-3-3V6a1 1 0 011-1h1a1 1 0 011 1v3l3 3H9z"></path>
+                                        </svg>
+                                        <span class="text-gray-600">25 lecciones</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                        </path>
+                                    </svg>
+                                    <span class="font-semibold mr-1">4.9</span>
+                                    <span class="text-gray-500 text-sm">(reseñas)</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <span class="text-2xl font-bold text-[#013ca4]">$49</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2"
+                                        aria-label="Precio original $99">$99</span>
+                                </div>
+                            </div>
+
+                            <button
+                                id="view-course1-btn"
+                                class="w-full bg-[#013ca4] hover:bg-[#0175e4] text-white py-3 rounded-md cursor-pointer hover:scale-105 active:scale-95 transition"
+                                aria-label="Ver detalles del curso Finanzas Personales para Jóvenes">
+                                Ver Curso
+                            </button>
+                        </div>
+                    </article>
+
+                    <!-- Course 2 - Desarrollo Web -->
+                    <article
+                        class="bg-white border-0 shadow-lg hover:shadow-xl transition-all duration-300 relative overflow-hidden rounded-lg"
+                        role="listitem">
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="w-12 h-12 rounded-lg flex items-center justify-center text-white bg-[#013ca4]"
+                                    aria-hidden="true">
+                                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                </div>
+                                <span
+                                    class="border border-[#73b7ff] text-[#013ca4] px-3 py-1 rounded-full text-sm">Finanzas</span>
+                            </div>
+
+                            <h3 class="text-xl font-bold mb-2 text-[#031638]">Aprende a como invertir en vienes raices</h3>
+                            <p class="text-gray-600 mb-4">Aprende las diferentes estrategias de invreion</p>
+
+                            <div class="space-y-3 mb-4">
+                                <div class="flex items-center justify-between text-sm">
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1 text-[#0175e4]" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                        </svg>
+                                        <span class="text-gray-600">12,300+ estudiantes</span>
+                                    </div>
+                                    <div class="flex items-center">
+                                        <svg class="w-4 h-4 mr-1 text-[#0175e4]" fill="currentColor"
+                                            viewBox="0 0 20 20">
+                                            <path d="M9 12h6l-3-3V6a1 1 0 011-1h1a1 1 0 011 1v3l3 3H9z"></path>
+                                        </svg>
+                                        <span class="text-gray-600">45 lecciones</span>
+                                    </div>
+                                </div>
+
+                                <div class="flex items-center">
+                                    <svg class="w-4 h-4 text-yellow-400 fill-current mr-1" viewBox="0 0 20 20">
+                                        <path
+                                            d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z">
+                                        </path>
+                                    </svg>
+                                    <span class="font-semibold mr-1">4.8</span>
+                                    <span class="text-gray-500 text-sm">(reseñas)</span>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center justify-between mb-4">
+                                <div>
+                                    <span class="text-2xl font-bold text-[#013ca4]">$79</span>
+                                    <span class="text-sm text-gray-500 line-through ml-2">$149</span>
+                                </div>
+                            </div>
+
+                            <button
+                                id="view-course2-btn"
+                                class="w-full bg-[#013ca4] hover:bg-[#0175e4] text-white py-3 rounded-md cursor-pointer hover:scale-105 active:scale-95 transition">
+                                Ver Curso
+                            </button>
+                        </div>
+                    </article>
+                </div>
+            </div>
+            </div>
+
+
+
+            <!-- Why Choose BillUp Section -->
+            <section class="py-20 px-4 bg-[#031638]" aria-labelledby="benefits-heading">
+                <div class="container mx-auto">
+                    <header class="text-center mb-16">
+                        <div class="flex justify-center mb-6">
+                            <img src="../../../public/assets/logotipo sin letras.svg
+    " alt="BillUp Logo"
+                                class="w-16 h-16 filter brightness-0 invert">
+                        </div>
+                        <h2 id="benefits-heading" class="text-3xl md:text-4xl font-bold mb-4 text-white">¿Por qué elegir
+                            BillUp?</h2>
+                        <p class="text-xl text-gray-300 max-w-2xl mx-auto">
+                            La plataforma de aprendizaje que se adapta a tu ritmo y objetivos
+                        </p>
+                    </header>
+
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-8" role="list">
+                        <article class="bg-white shadow-lg rounded-lg p-6" role="listitem">
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-[#013ca4]"
+                                    aria-hidden="true">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[#031638] mb-4">Aprendizaje Personalizado</h3>
+                                <p class="text-gray-600">
+                                    Cursos adaptados a tu nivel y objetivos específicos con rutas de aprendizaje
+                                    personalizadas.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="bg-white shadow-lg rounded-lg p-6" role="listitem">
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-[#013ca4]"
+                                    aria-hidden="true">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197m13.5-9a2.5 2.5 0 11-5 0 2.5 2.5 0 015 0z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[#031638] mb-4">Comunidad Global</h3>
+                                <p class="text-gray-600">
+                                    Conecta con estudiantes de todo el mundo y aprende en una comunidad activa y
+                                    colaborativa.
+                                </p>
+                            </div>
+                        </article>
+
+                        <article class="bg-white shadow-lg rounded-lg p-6" role="listitem">
+                            <div class="text-center">
+                                <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 bg-[#013ca4]"
+                                    aria-hidden="true">
+                                    <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                            d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z">
+                                        </path>
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-[#031638] mb-4">Eventos Exclusivos</h3>
+                                <p class="text-gray-600">
+                                    Participa con nostros en eventos exclusivos como el BillUp Fest y el BillUp Runing.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+            </section>
+    </main>
+    </main>
+</body>
+</html>

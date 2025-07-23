@@ -1,0 +1,22 @@
+{
+  "users": [
+    {
+      "id": "4f5h",
+      "username": "luis",
+      "email": "antonio1@gmail.com",
+      "phone": "1212121212",
+      "password": "1234",
+      "roleId": "0",
+      "coursesId": []
+    },
+    {
+      "id": "7e1f",
+      "username": "scomas1",
+      "email": "santiagocomas079@gmail.com",
+      "phone": "3104567789",
+      "password": "1234",
+      "roleId": "0",
+      "coursesId": []
+    }
+  ]
+}

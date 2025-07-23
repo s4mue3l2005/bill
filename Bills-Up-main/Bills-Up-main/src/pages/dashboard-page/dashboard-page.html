@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/src/styles.css">
+    <title>Bill up</title>
+</head>
+
+<body>
+    <section class="min-h-screen bg-white">
+        <div class="flex flex-col md:flex-row">
+            <!-- Sidebar -->
+            <div class="w-full md:w-80 bg-white shadow-xl border-r border-slate-200">
+                <div class="p-6 border-b border-slate-100">
+                    <div class="flex items-center gap-3">
+                        <div id="profile-image-header" class="relative flex h-12 w-12 shrink-0 overflow-hidden rounded-full bg-blue-500 text-xl text-white
+                        justify-center align-top text-center pt-2.5">
+                        </div>
+                        <div id="aside-user-data"  >
+                        </div>
+
+                    </div>
+                </div>
+                <nav class="p-4">
+                    <div class="space-y-2">
+                        <!--This is the progress button item -->
+                        <button id="progress-btn" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl 
+                       bg-azul-pastel text-blue-950  shadow-sm 
+                       transition-all duration-200 ease-in-out 
+                       hover:bg-azul-pastel/80 hover:shadow-md 
+                       focus:outline-none focus:ring-2 focus:ring-text-blue-950  focus:ring-offset-2
+                       group">
+                            <img src="/public/assets/progress.svg" alt="Progress"
+                                class="transition-transform duration-200 ease-in-out group-hover:scale-110 " />
+                            <div class="flex-1 text-left">
+                                <div class="font-medium">Mi Progreso</div>
+                                <div class="text-xs opacity-70">Ver avance del curso</div>
+                            </div>
+                            <img src="/public/assets/arrow_right.svg" alt="Arrow right"
+                                class="transition-transform duration-200 ease-in-out group-hover:rotate-90 active:scale-75" />
+                        </button>
+                        <!-- This is the configuration button item -->
+                        <button id="config-btn" class="w-full flex items-center gap-3 px-4 py-3 rounded-xl 
+                       bg-azul-pastel text-blue-950 shadow-sm 
+                       transition-all duration-200 ease-in-out 
+                       hover:bg-azul-pastel/80 hover:shadow-md 
+                       focus:outline-none focus:ring-2 focus:ring-blue-950 focus:ring-offset-2
+                       group">
+                            <img src="/public/assets/settings.svg" alt="settings"
+                                class="transition-transform duration-200 ease-in-out group-hover:scale-110" />
+                            <div class="flex-1 text-left">
+                                <div class="font-medium">Configuración</div>
+                                <div class="text-xs opacity-70">Ver ajustes de perfil</div>
+                            </div>
+                            <img src="/public/assets/arrow_right.svg" alt="Arrow right"
+                                class="transition-transform duration-200 ease-in-out group-hover:rotate-90 active:scale-75" />
+                        </button>
+                </nav>
+            </div>
+            <!-- Main Content -->
+            <div class="flex-1 p-8">
+                <!-- Progress section -->
+                <section id="progress-section" class="transition-all duration-500 opacity-100 translate-y-0">
+                    <div class="space-y-6">
+                        <div class="flex items-center justify-between">
+                            <div>
+                                <h1 class="text-3xl font-bold text-blue-950">Mi Progreso</h1>
+                                <p class="text-azul-oscuro/80 mt-1 text-blue-950">Continúa con tu aprendizaje</p>
+                            </div>
+                            <div
+                                class="inline-flex items-center rounded-full border  text-xs font-semibold transition-colors text-azul-oscuro px-3 py-1  hover:bg-blue-950 hover:text-white">
+                                En progreso
+                            </div>
+                        </div>
+                        <!-- Course Reference Card -->
+                        <div
+                            class="rounded-xl bg-card text-card-foreground overflow-hidden shadow-lg border-0 bg-blue-500 text-white transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl">
+                            <div class="flex flex-col space-y-1.5 p-6 pb-4">
+                                <div class="flex items-start justify-between">
+                                    <div class="flex-1">
+                                        <h3 class="text-2xl font-semibold leading-none tracking-tight mb-2">Curso Actual
+                                        </h3>
+                                        <p class="text-sm text-muted-foreground text-white/80 flex items-center gap-2">
+                                            <img src="/public/assets/people.svg" alt="person">
+                                            Instructor: María González
+                                        </p>
+                                    </div>
+                                    <div class="bg-white/20 rounded-full p-3">
+                                        <img src="/public/assets/book.svg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="p-6 pt-0 space-y-4">
+                                <div class="flex flex-col gap-4 pt-2">
+                                    <div class="bg-white/10 rounded-lg p-3">
+                                        <div class="flex items-center gap-2 text-sm">
+                                            <img src="/public/assets/target.svg" alt="Target">
+                                            Lecciones completadas
+                                        </div>
+                                        <div class="text-xl font-bold mt-1">16/24</div>
+                                    </div>
+                                </div>
+                                <div class="pt-4">
+
+                                    <!-- Button for continue the course -->
+                                    <button class="inline-flex items-center justify-center whitespace-nowrap
+                                           rounded-md text-xs font-medium
+                                           h-7 px-2 py-0.5 w-full
+                                           bg-white text-blue-900
+                                           ring-offset-background focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2
+                                           transition  duration-300 ease-in-out
+                                           transform scale-[1.3] hover:scale-[1.5] hover:bg-white/70 hover:text-blue-950/80
+                                           disabled:pointer-events-none disabled:opacity-50">
+                                        Continuar con el curso
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- configuration -->
+                <section id="config-section" class="hidden md:absolute md:top-0 md:left-80 w-full md:w-[calc(100%-20rem)] p-8 bg-white  shadow-4 z-10
+                       transition-all duration-500  md:translate-y-0 translate-y-4 ">
+                    <div class="rounded-xl bg-white text-blue-950 shadow border border-blue-200 overflow-hidden">
+                        <div class="flex flex-col space-y-4 p-6">
+                            <h2 class="text-2xl font-semibold">Perfil de Usuario</h2>
+                            <p class="text-sm text-blue-700">Actualiza tu información personal</p>
+                            <!-- inputs for update the user -->
+                            <article class="space-y-3">
+                                <input id="username" type="text" placeholder="Nombre de usuario"
+                                    class="w-full border border-blue-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <input id="email" type="email" placeholder="Correo electrónico"
+                                    class="w-full border border-blue-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <input id="phone" type="tel" placeholder="Teléfono"
+                                    class="w-full border border-blue-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <input id="password" type="password" placeholder="Contraseña"
+                                    class="w-full border border-blue-200 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                            </article>
+
+                            <div class="flex items-center gap-4 mt-4">
+                                <div class="relative h-16 w-16 overflow-hidden rounded-full">
+                                    <img class="h-full w-full object-cover" alt="Avatar de usuario"
+                                        src="/placeholder.svg?height=64&width=64" />
+<!--Imagen generica -->
+                                        <div id="profile-image"
+                                        class="absolute inset-0 flex items-center justify-center rounded-full bg-blue-500 text-white text-xl">
+                                        </div>
+                                </div>
+                                <div class="flex-1 space-y-2">
+                                    <div class="font-semibold" id="config-user-data"></div>
+                                    <div class="text-blue-700" id="config-user-data-email"></div>
+                                    <section class="flex flex-wrap gap-2">
+                                        <button id="update-btn"
+                                            class="inline-flex items-center cursor-pointer hover:scale-105 active:scale-95  rounded-md text-sm font-medium bg-blue-500 text-white px-4 py-2
+                                   hover:bg-blue-600 transition-colors duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2">
+                                            Actualizar perfil
+                                        </button>
+                                    </section>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+
+            </div>
+        </div>
+        </div>
+        </div>
+        </div>
+
+        </div>
+    </section>
+
+    <script type="module" src="./dashboard-page.js"></script>
+</body>
+
+</html>

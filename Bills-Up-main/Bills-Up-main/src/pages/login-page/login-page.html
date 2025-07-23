@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Iniciar Sesión | Bill Up</title>
+  </head>
+  <body>
+    <main
+      class="font-sans min-h-screen flex items-center justify-center p-4 bg-[#031638]"
+    >
+      <section
+        class="w-full max-w-md bg-white shadow-2xl rounded-3xl overflow-hidden border-none"
+      >
+        <section class="p-8">
+          <div class="text-center mb-8">
+            <img
+              src="/public/assets/logo.svg"
+              alt="company logo"
+              class="w-1/2 h-auto object-cover mx-auto"
+            />
+            <h1 class="text-2xl font-bold mb-2 text-[#031638]">
+              Bienvenido a Bill Up
+            </h1>
+            <p class="text-gray-600">Iniciar Sesión</p>
+          </div>
+
+          <form class="space-y-8" id="form">
+            <div class="space-y-2">
+              <label
+                for="email-login"
+                class="block text-sm font-medium text-[#031638]"
+              >
+                Correo Electrónico
+              </label>
+              <div class="relative">
+                <img
+                  src="/public/assets/emailicon.svg"
+                  alt=""
+                  class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                />
+                <input
+                  id="email-login"
+                  type="email"
+                  placeholder="billup@ejemplo.com"
+                  class="w-full h-12 pl-12 border-2 rounded-xl border-[#73b7ff] outline-none focus:ring-2 focus:ring-[#0175e4] transition-all"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="space-y-2">
+              <label
+                for="password-login"
+                class="block text-sm font-medium text-[#031638]"
+              >
+                Contraseña
+              </label>
+              <div class="relative">
+                <img
+                  src="/public/assets/password.svg"
+                  alt="password icon"
+                  class="absolute left-3 top-3 h-5 fill-[#2286e4]"
+                />
+                <input
+                  id="password-login"
+                  type="password"
+                  placeholder="Tu contraseña"
+                  class="w-full h-12 pl-12 pr-12 border-2 rounded-xl border-[#73b7ff] outline-none focus:ring-2 focus:ring-[#0175e4] transition-all"
+                  required
+                />
+              </div>
+            </div>
+
+            <button
+              type="submit"
+              class="w-full h-12 bg-[#0175e4] text-white font-semibold rounded-xl hover:opacity-90 hover:scale-105 active:opacity-100 active:scale-95 transition-transform cursor-pointer"
+            >
+              Ingresar
+            </button>
+          </form>
+
+          <div class="text-center mt-8">
+            <span class="text-gray-600">¿No tienes cuenta aún? </span>
+            <button
+              type="button"
+              class="font-medium text-[#0175e4] hover:opacity-80 active:scale-95 cursor-pointer"
+              id="go-register"
+            >
+              Registrarse
+            </button>
+          </div>
+        </section>
+      </section>
+    </main>
+    <script type="module" src="./login-page.js"></script>
+  </body>
+</html>

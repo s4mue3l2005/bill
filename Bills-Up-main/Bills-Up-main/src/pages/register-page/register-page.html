@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <title>Registrarse | Bill Up</title>
+  </head>
+
+  <body>
+    <div class="min-h-screen flex items-center justify-center p-4 bg-[#031638]">
+      <main>
+        <!--Container create account to register-->
+        <section
+          class="w-full max-w-md bg-white shadow-2xl border-0 rounded-3xl overflow-hidden px-4"
+        >
+          <header class="p-6 text-center">
+            <div class="mb-6">
+              <img
+                src="/public/assets/icono.svg"
+                alt="Bill Up Logo"
+                width="120"
+                height="120"
+                class="mx-auto"
+              />
+            </div>
+            <h1 class="text-2xl font-bold mb-2 text-black">Crea tu cuenta</h1>
+            <p class="text-gray-400">Regístrate para empezar con Bill Up</p>
+          </header>
+          <!--Register form-->
+          <section class="p-6">
+            <form class="space-y-4" id="register-form">
+              <div class="space-y-2">
+                <!--Full name-->
+                <label for="name" class="text-sm font-medium text-black"
+                  >Nombre completo</label
+                >
+                <article class="relative">
+                  <!--Icon user-->
+                  <img
+                    src="/public/assets/iconUser.svg"
+                    class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                  />
+                  <input
+                    id="username"
+                    type="text"
+                    placeholder="Tu nombre completo"
+                    class="pl-12 h-12 border-2 border-[#73b7ff] rounded-xl focus:ring-0 focus:border-[#0175e4] w-full bg-white text-black placeholder-gray-400"
+                    required
+                  />
+                </article>
+              </div>
+              <!--Email-->
+              <div class="space-y-2">
+                <label for="email" class="text-sm font-medium text-black"
+                  >Correo electrónico</label
+                >
+                <article class="relative">
+                  <!--Icon Email-->
+                  <img
+                    src="/public/assets/iconEmail.svg"
+                    class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                  />
+                  <input
+                    id="email"
+                    type="email"
+                    placeholder="tu@email.com"
+                    class="pl-12 h-12 border-2 border-[#73b7ff] rounded-xl focus:ring-0 focus:border-[#0175e4] w-full bg-white text-black placeholder-gray-400"
+                    required
+                  />
+                </article>
+              </div>
+              <!--Telephone-->
+              <div class="space-y-2">
+                <label for="phone" class="text-sm font-medium text-black"
+                  >Teléfono</label
+                >
+                <article class="relative">
+                  <!--Icon Phone-->
+                  <img
+                    src="/public/assets/iconPhone.svg"
+                    class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                  />
+                  <input
+                    id="phone"
+                    type="tel"
+                    placeholder="Tu número de teléfono"
+                    class="pl-12 h-12 border-2 border-[#73b7ff] rounded-xl focus:ring-0 focus:border-[#0175e4] w-full bg-white text-black placeholder-gray-400"
+                  />
+                </article>
+              </div>
+              <!--Password-->
+              <div class="space-y-2">
+                <label for="password" class="text-sm font-medium text-black"
+                  >Contraseña</label
+                >
+                <article class="relative">
+                  <!--Icon password-->
+                  <img
+                    src="/public/assets/iconPassword.svg"
+                    class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                  />
+                  <input
+                    id="password1"
+                    type="password"
+                    placeholder="Crea tu contraseña"
+                    class="pl-12 pr-12 h-12 border-2 border-[#73b7ff] rounded-xl focus:ring-0 focus:border-[#0175e4] w-full bg-white text-black placeholder-gray-400"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="togglePassword"
+                    class="absolute right-3 top-3 hover:opacity-70 text-[#0175e4]"
+                  >
+                    <img
+                      src="/public/assets/iconView.svg"
+                      class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                    />
+
+                    <img
+                      src="/public/assets/iconView.svg"
+                      class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                    />
+                  </button>
+                </article>
+              </div>
+              <!--Confirm Pasword-->
+              <div class="space-y-2">
+                <label
+                  for="confirmPassword"
+                  class="text-sm font-medium text-black"
+                  >Confirmar contraseña</label
+                >
+                <article class="relative">
+                  <!--Icon Pasword-->
+                  <img
+                    src="/public/assets/iconPassword.svg"
+                    class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                  />
+                  <input
+                    id="password2"
+                    type="password"
+                    placeholder="Confirma tu contraseña"
+                    class="pl-12 pr-12 h-12 border-2 border-[#73b7ff] rounded-xl focus:ring-0 focus:border-[#0175e4] w-full bg-white text-black placeholder-gray-400"
+                    required
+                  />
+                  <button
+                    type="button"
+                    id="toggleConfirmPassword"
+                    class="absolute right-3 top-3 hover:opacity-70 text-[#0175e4]"
+                  >
+                    <img
+                      src="/public/assets/iconView.svg"
+                      class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                    />
+                    <img
+                      src="/public/assets/iconView.svg"
+                      class="absolute left-3 top-3 h-5 fill-[#0175e4]"
+                    />
+                  </button>
+                </article>
+              </div>
+              <!--Button of register to submmit the form-->
+              <button
+                type="submit"
+                class="w-full h-12 text-white font-semibold rounded-xl hover:scale-105 hover:opacity-90 active:scale-95 active:opacity-100 cursor-pointer transition-transform mt-8 bg-[#0175e4]"
+              >
+                Registrarse
+              </button>
+            </form>
+            <!--Footer that rediriges to the link of the login-->
+            <footer class="text-center mt-8">
+              <span class="text-gray-400">¿Ya tienes una cuenta? </span>
+              <button
+                class="font-medium hover:opacity-80 active:opacity-100 transition-opacity cursor-pointer text-[#0175e4]"
+                id="go-login"
+              >
+                Inicia sesión
+              </button>
+            </footer>
+          </section>
+        </section>
+      </main>
+    </div>
+  </body>
+</html>

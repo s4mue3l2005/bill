@@ -1,0 +1,13 @@
+{
+  "users": [
+    {
+      "id": "fa03",
+      "username": "Willman Giraldo",
+      "email": "willman0520@outlook.com",
+      "phone": "3104338015",
+      "password": "1234",
+      "roleId": "0",
+      "coursesId": []
+    }
+  ]
+}
